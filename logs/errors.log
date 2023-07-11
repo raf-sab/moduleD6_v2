@@ -1,0 +1,2485 @@
+[2023-07-03 14:51:34,490] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 14:51:35,008] ERROR "GET /favicon.ico HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 14:53:16,040] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 14:53:16,476] ERROR "GET /favicon.ico HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 14:57:29,747] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 14:57:30,274] ERROR "GET /favicon.ico HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 15:22:22,142] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 15:22:22,699] ERROR "GET /favicon.ico HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 15:24:29,878] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-03 15:24:30,311] ERROR "GET /favicon.ico HTTP/1.1" 500 59 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-04 19:53:15,787] ERROR Internal Server Error: /accounts/signup/ D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688485995-ErUex9EWp4Y0'), <traceback object at 0x00000237C20FC740>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 254, in form_valid
+    return complete_signup(
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 186, in complete_signup
+    return perform_login(
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 168, in perform_login
+    response = adapter.pre_login(request, user, **hook_kwargs)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 412, in pre_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 319, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 60, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 168, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 549, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 140, in send_mail
+    msg.send()
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+  File "D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 94, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688485995-ErUex9EWp4Y0')
+[2023-07-04 19:53:15,869] ERROR "POST /accounts/signup/ HTTP/1.1" 500 196451 D:\99\moduleD6\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 11:15:51,973] ERROR Internal Server Error: / D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('debug_toolbar/base.html'), <traceback object at 0x0000020F6E90F7C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\debug_toolbar\middleware.py", line 74, in __call__
+    rendered = toolbar.render_toolbar()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\debug_toolbar\toolbar.py", line 82, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: debug_toolbar/base.html
+[2023-07-05 11:15:51,977] ERROR "GET / HTTP/1.1" 500 84216 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 11:15:52,285] ERROR Internal Server Error: /favicon.ico D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('debug_toolbar/base.html'), <traceback object at 0x0000020F6E9DC180>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\debug_toolbar\middleware.py", line 74, in __call__
+    rendered = toolbar.render_toolbar()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\debug_toolbar\toolbar.py", line 82, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: debug_toolbar/base.html
+[2023-07-05 11:15:52,289] ERROR "GET /favicon.ico HTTP/1.1" 500 83916 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 11:47:18,416] ERROR Internal Server Error: /accounts/signup/ D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688543238-IlNLBqMDUuQ0'), <traceback object at 0x0000024436D0D400>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 254, in form_valid
+    return complete_signup(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 186, in complete_signup
+    return perform_login(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 168, in perform_login
+    response = adapter.pre_login(request, user, **hook_kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 412, in pre_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 319, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 60, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 168, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 549, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 140, in send_mail
+    msg.send()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 94, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688543238-IlNLBqMDUuQ0')
+[2023-07-05 11:47:18,429] ERROR "POST /accounts/signup/ HTTP/1.1" 500 187360 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 11:52:55,874] ERROR Internal Server Error: /accounts/signup/ D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688543576-uqNT3OLDWiE0'), <traceback object at 0x000002443774B000>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\views.py", line 254, in form_valid
+    return complete_signup(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 186, in complete_signup
+    return perform_login(
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 168, in perform_login
+    response = adapter.pre_login(request, user, **hook_kwargs)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 412, in pre_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\utils.py", line 319, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 60, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\models.py", line 168, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 549, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\allauth\account\adapter.py", line 140, in send_mail
+    msg.send()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 127, in send_messages
+    new_conn_created = self.open()
+  File "D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\mail\backends\smtp.py", line 94, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\RAF\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: Invalid user or password! 1688543576-uqNT3OLDWiE0')
+[2023-07-05 11:52:55,886] ERROR "POST /accounts/signup/ HTTP/1.1" 500 187360 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 16:40:18,573] ERROR "GET /admin/django_apscheduler/djangojob/delete_5Fold_5Fjob_5Fexecutions/change/ HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 20:18:37,223] ERROR "GET /admin/django_apscheduler/djangojob/ HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 20:18:54,784] ERROR "GET /admin/django_apscheduler/djangojob/ HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 20:20:17,923] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 20:20:34,284] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-05 20:21:31,239] ERROR "GET / HTTP/1.1" 500 59 D:\99\moduleD6\DDD\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-06 02:45:49,545] ERROR Internal Server Error: / D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000021EA0C9AE00>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\defaulttags.py", line 1491, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?
+[2023-07-06 02:45:49,559] ERROR "GET / HTTP/1.1" 500 207529 D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-06 03:02:55,690] ERROR Internal Server Error: / D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 96: ''news/assets/home.jpg'', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000015A209E6D40>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: "'news/assets/home.jpg'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\defaulttags.py", line 1491, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 96: ''news/assets/home.jpg'', expected 'endblock'. Did you forget to register or load this tag?
+[2023-07-06 03:02:55,772] ERROR "GET / HTTP/1.1" 500 249957 D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-06 03:17:29,644] ERROR Internal Server Error: / D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000016F1EA69680>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\defaulttags.py", line 1491, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'static', expected 'endblock'. Did you forget to register or load this tag?
+[2023-07-06 03:17:29,661] ERROR "GET / HTTP/1.1" 500 207153 D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-06 03:56:09,669] ERROR Internal Server Error: /search/ D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 12: 'static', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000002508BE4D100>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'static', expected 'endblock'. Did you forget to register or load this tag?
+[2023-07-06 03:56:09,683] ERROR "GET /search/ HTTP/1.1" 500 198248 D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-06 03:56:15,739] ERROR Internal Server Error: /search/ D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 12: 'static', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000002508C09BD00>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'static', expected 'endblock'. Did you forget to register or load this tag?
+[2023-07-06 03:56:15,749] ERROR "GET /search/ HTTP/1.1" 500 198376 D:\99\moduleD6\DDD1\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 10:35:57,933] ERROR Internal Server Error: /add/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'NameError'>, NameError("name 'EMAIL_HOST_USER' is not defined"), <traceback object at 0x0000027A38BE5080>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "D:\99\moduleD6\DDD2\moduleD6\news\views.py", line 166, in form_valid
+    response = super().form_valid(form)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\generic\edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\forms\models.py", line 543, in save
+    self._save_m2m()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\forms\models.py", line 524, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\fields\related.py", line 1956, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1236, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1137, in add
+    self._add_items(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1447, in _add_items
+    signals.m2m_changed.send(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "D:\99\moduleD6\DDD2\moduleD6\news\signals.py", line 14, in notify_subscribers
+    send_sub_emails(instance)
+  File "D:\99\moduleD6\DDD2\moduleD6\news\utils.py", line 34, in send_sub_emails
+    from_email=EMAIL_HOST_USER,
+NameError: name 'EMAIL_HOST_USER' is not defined
+[2023-07-11 10:35:57,944] ERROR "POST /add/ HTTP/1.1" 500 150930 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:34:55,930] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x00000275439AAAC0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:34:55,948] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 202254 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:35:14,536] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000027543B0F3C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:35:14,548] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 202254 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:35:51,274] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000027543B96480>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:35:51,288] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:39:57,024] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000025BE0DEB800>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:39:57,039] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 202254 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:40:04,982] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000025BE0DBE580>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:40:04,994] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 202254 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:40:26,276] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000025BE0DE92C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:40:26,300] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:40:49,258] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000025BE0DC4D80>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:40:49,271] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201264 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:44:48,419] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001C69E08C580>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:44:48,435] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:45:29,706] ERROR Internal Server Error: /admin/news/category/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001C69E3422C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:45:29,718] ERROR "POST /admin/news/category/ HTTP/1.1" 500 197262 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:46:25,868] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001C69E38C7C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:46:25,880] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:49:00,622] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001A87859C540>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:49:00,639] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:52:01,564] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001B3513BC880>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:52:01,613] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201136 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:53:50,819] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000022807AB83C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:53:50,865] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201135 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:54:33,534] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000022807C76A40>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:54:33,549] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201135 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:55:22,795] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000022807CA6240>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:55:22,809] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201135 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:56:02,489] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000022807DA1700>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:56:02,501] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201059 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 11:57:49,974] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000022807968A00>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 11:57:49,986] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201137 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:00:44,395] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000023966A9F900>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:00:44,443] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:01:10,407] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000023966C77C40>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:01:10,426] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201061 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:02:16,986] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000023966CCE580>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:02:17,000] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:03:53,152] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001885802A040>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:03:53,168] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:03:59,981] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x00000188580283C0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:04:00,008] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:08:10,033] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x00000247241E9740>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:08:10,062] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:11:22,524] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x0000012FC14DD540>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:11:22,539] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201148 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:21:25,274] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001DA0B7C7100>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:21:25,300] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201180 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 12:24:53,366] ERROR Internal Server Error: /admin/auth/user/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000001DA0B4F5640>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 12:24:53,377] ERROR "POST /admin/auth/user/ HTTP/1.1" 500 201058 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 16:12:52,205] ERROR Internal Server Error: /admin/news/category/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000002416E9CEBC0>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 16:12:52,220] ERROR "POST /admin/news/category/ HTTP/1.1" 500 199193 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
+[2023-07-11 16:14:13,741] ERROR Internal Server Error: /admin/news/category/10/delete/ D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\log.py
+(<class 'django.db.utils.OperationalError'>, OperationalError('no such table: news_subscribeduserscategory'), <traceback object at 0x000002416EA50040>)
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: news_subscribeduserscategory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2106, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2133, in _delete_view
+    ) = self.get_deleted_objects([obj], request)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 121, in get_deleted_objects
+    collector.collect(objs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\contrib\admin\utils.py", line 187, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\deletion.py", line 348, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 412, in __bool__
+    self._fetch_all()
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: news_subscribeduserscategory
+[2023-07-11 16:14:13,752] ERROR "GET /admin/news/category/10/delete/ HTTP/1.1" 500 190168 D:\99\moduleD6\DDD2\moduleD6\venv\lib\site-packages\django\core\servers\basehttp.py
+None
