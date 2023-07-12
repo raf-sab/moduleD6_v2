@@ -1,10 +1,7 @@
 from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives, get_connection, send_mail
 from django.template.loader import render_to_string
-
-# from environ import EMAIL_HOST_USER
 import requests
-
 import os
 
 
