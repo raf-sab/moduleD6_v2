@@ -7,8 +7,6 @@ from django.views.decorators.http import require_POST
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
 from django.utils import timezone
 from django.db.models import Count
-
-
 from .models import *
 from .filter import PostFilter
 from .utils import get_filter_params, send_contact_email
@@ -96,16 +94,6 @@ class PostDeleteView(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
         if post.author.author_user != request.user:
             raise PermissionDenied
         return super().dispatch(request, *args, **kwargs)
-
-    # def get_success_url(self):
-    #     cache.delete(f'post_{self.kwargs["pk"]}')
-    #     # Делаем редирект на ту же страницу из которой было вызвано представление
-    #     referer = self.request.META.get('HTTP_REFERER')
-    #     print(referer)
-    #     if referer and referer != self.request.build_absolute_uri() and is_url_valid(referer):
-    #         return referer
-    #
-    #     return super().get_success_url()
 
 
 class SearchPost(ListView):
